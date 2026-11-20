@@ -88,6 +88,8 @@ Each report includes readable steps and redacted HTTP evidence. Playwright JSON 
 
 ## Results and limitations
 
+Validated results: local smoke **4/4**, full regression **72/72**, three additional sequential runs **72/72 each**, and two two-worker runs **72/72 each**, with zero failed, skipped or flaky outcomes in these final runs. Hosted regression also passed **72/72** and deployed both reports successfully. I verified the live dashboards, test details and all 553 published report files against the actual CI artifact. See [hosted validation](docs/hosted-validation.md) for the verified run and evidence.
+
 The [execution summary](docs/execution-summary.md) records actual local and hosted evidence. The initial run exposed two incorrect assumptions in tests; I corrected them using authoritative pinned source, preserving the original failure summary. See [investigation details](docs/known-issues.md), [coverage](docs/test-coverage.md), [test strategy](docs/test-strategy.md) and [feasibility checks](docs/feasibility-validation.md).
 
 TaskDesk is my application configuration on an established engine, not an upstream ready-made product. PocketBase deliberately hides denied records with 404 and filters inaccessible lists to empty results. Whitespace counts toward string length. Unsupported PUT returns 404. Stateless authentication has no server logout endpoint; expiry fabrication is not tested. Viewer assignment, email delivery, billing and load testing are outside the implemented scope. Future work could add viewer project assignments and retained Allure history; neither is claimed here.

@@ -18,4 +18,4 @@ The final local report represents **parallel-2**, with Playwright HTML at `repor
 
 Clean `npm ci`, TypeScript, ESLint, Prettier, all scope commands, the pinned application installer and a separate SQLite process-restart persistence probe were executed. Final report rendering and credential checks are recorded in `docs/report-quality.md`.
 
-GitHub Actions and Pages: pending publication. Hosted success will be recorded only after actual hosted verification.
+GitHub Actions and Pages: successful. Hosted regression passed 72/72 with two workers on Node v24.22.2 and Playwright 1.65.1, with zero failures, skips or flaky results. [Verified hosted execution](https://github.com/srenevasanks/playwright-typescript-api-automation/actions/runs/44780473895). See [hosted validation](hosted-validation.md) for report verification and actual artifacts.

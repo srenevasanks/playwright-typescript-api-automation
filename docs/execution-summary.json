@@ -1,8 +1,31 @@
 {
   "application": "TaskDesk / PocketBase 0.40.6",
   "finalLocalRun": "parallel-2",
-  "generated": "2026-11-20T17:07:11.077Z",
-  "githubActions": "Pending publication; no success claimed",
+  "generated": "2026-11-20T17:12:59.582Z",
+  "githubActions": "https://github.com/srenevasanks/playwright-typescript-api-automation/actions/runs/44780473895",
+  "hosted": {
+    "run": "regression",
+    "started": "2026-11-20T17:09:21.745Z",
+    "completed": "2026-11-20T17:09:31.673Z",
+    "application": "TaskDesk / PocketBase 0.40.6",
+    "environment": "GitHub Actions",
+    "node": "v24.22.2",
+    "playwright": "1.65.1",
+    "total": 72,
+    "passed": 72,
+    "failed": 0,
+    "skipped": 0,
+    "flaky": 0,
+    "durationMs": 9121.864000000001,
+    "workers": 2,
+    "scope": "regression",
+    "reports": {
+      "playwright": "reports/regression/playwright",
+      "allure": "reports/regression/allure"
+    },
+    "githubActions": "https://github.com/srenevasanks/playwright-typescript-api-automation/actions/runs/44780473895",
+    "runnerExitCode": 0
+  },
   "runs": [
     {
       "run": "smoke",

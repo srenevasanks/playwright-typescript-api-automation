@@ -1,0 +1,10 @@
+{
+  "at": "2026-11-20T17:12:26.369Z",
+  "status": "passed",
+  "baseURL": "https://srenevasanks.github.io/playwright-typescript-api-automation/",
+  "workflow": "https://github.com/srenevasanks/playwright-typescript-api-automation/actions/runs/44780473895",
+  "scope": "regression",
+  "total": 72,
+  "passed": 72,
+  "assetsVerifiedOverHttp": 553
+}

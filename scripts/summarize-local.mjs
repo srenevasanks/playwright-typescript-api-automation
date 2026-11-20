@@ -1,4 +1,7 @@
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+const hosted = existsSync('evidence/hosted-summary.json')
+  ? JSON.parse(readFileSync('evidence/hosted-summary.json', 'utf8'))
+  : undefined;
 const names = [
   'smoke',
   'regression',
@@ -19,7 +22,8 @@ writeFileSync(
       application: 'TaskDesk / PocketBase 0.40.6',
       finalLocalRun: 'parallel-2',
       generated: new Date().toISOString(),
-      githubActions: 'Pending publication; no success claimed',
+      githubActions: hosted?.githubActions ?? 'Pending publication; no success claimed',
+      hosted,
       runs,
     },
     null,
@@ -36,3 +40,13 @@ writeFileSync(
   'docs/execution-summary.md',
   `# Execution summary\n\nI executed the actual API suite on Windows with Node ${runs[0].node}, Playwright ${runs[0].playwright}, npm 11.18.0 and PocketBase 0.40.6. Times below are UTC (Asia/Kolkata is UTC+05:30). All final local executions occurred on 20 November 2026. Smoke and regression are separate scopes.\n\n| Run | Scope | Workers | Passed/total | Failed | Skipped | Flaky | Seconds | Started UTC |\n| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |\n${rows}\n\nEach full suite contains 72 distinct invocations. The three sequential stability repetitions followed a passing baseline, then two two-worker runs passed. Retries were zero. No cleanup failure was reported. This is observed stability, not a guarantee of future non-flakiness.\n\nThe final local report represents **parallel-2**, with Playwright HTML at \`reports/parallel-2/playwright/index.html\` and Allure HTML at \`reports/parallel-2/allure/index.html\`. Allure and Playwright durations measure different intervals: Playwright includes runner startup/teardown, while Allure's interval spans individual test results. Counts are reconciled automatically. Per-run JSON evidence is in \`evidence/*-summary.json\`; combined machine-readable evidence is \`docs/execution-summary.json\`.\n\nClean \`npm ci\`, TypeScript, ESLint, Prettier, all scope commands, the pinned application installer and a separate SQLite process-restart persistence probe were executed. Final report rendering and credential checks are recorded in \`docs/report-quality.md\`.\n\nGitHub Actions and Pages: pending publication. Hosted success will be recorded only after actual hosted verification.\n`,
 );
+if (hosted) {
+  const markdown = readFileSync('docs/execution-summary.md', 'utf8');
+  writeFileSync(
+    'docs/execution-summary.md',
+    markdown.replace(
+      'GitHub Actions and Pages: pending publication. Hosted success will be recorded only after actual hosted verification.',
+      `GitHub Actions and Pages: successful. [Verified hosted execution](${hosted.githubActions}) passed ${hosted.passed}/${hosted.total} with ${hosted.workers} workers, zero failures, skips or flaky results. See [hosted validation](hosted-validation.md) for publication evidence.`,
+    ),
+  );
+}
