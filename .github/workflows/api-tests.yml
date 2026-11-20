@@ -1,0 +1,66 @@
+name: API tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: api-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - run: npm ci
+      - run: npm run app:install
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run format:check
+      - name: Smoke with real health readiness check
+        run: npm run test:smoke
+      - name: Full API regression with two workers
+        run: npm run test:regression
+        env:
+          WORKERS: '2'
+      - name: Verify persistence across process restart
+        run: node scripts/persistence.mjs
+      - name: Generate and reconcile reports
+        if: ${{ always() && hashFiles('reports/regression/summary.json') != '' }}
+        run: npm run test:report
+      - name: Upload genuine execution artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-execution
+          path: |
+            reports/
+            evidence/
+          retention-days: 14
+          if-no-files-found: error
+      - name: Prepare report site
+        run: node scripts/prepare-site.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: verified-report-site
+          path: reports/site/
+          retention-days: 14
+  publish:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: test
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/publish-reports.yml

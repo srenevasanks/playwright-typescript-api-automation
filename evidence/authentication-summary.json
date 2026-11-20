@@ -1,0 +1,23 @@
+{
+  "run": "authentication",
+  "started": "2026-11-20T17:02:09.775Z",
+  "completed": "2026-11-20T17:02:18.792Z",
+  "application": "TaskDesk / PocketBase 0.40.6",
+  "environment": "win32 local",
+  "node": "v24.11.1",
+  "playwright": "1.65.1",
+  "total": 16,
+  "passed": 16,
+  "failed": 0,
+  "skipped": 0,
+  "flaky": 0,
+  "durationMs": 6947.707,
+  "workers": 1,
+  "scope": "authentication",
+  "reports": {
+    "playwright": "reports/authentication/playwright",
+    "allure": "reports/authentication/allure"
+  },
+  "githubActions": "Not executed",
+  "runnerExitCode": 0
+}

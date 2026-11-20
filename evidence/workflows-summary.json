@@ -1,0 +1,23 @@
+{
+  "run": "workflows",
+  "started": "2026-11-20T17:02:40.001Z",
+  "completed": "2026-11-20T17:02:46.414Z",
+  "application": "TaskDesk / PocketBase 0.40.6",
+  "environment": "win32 local",
+  "node": "v24.11.1",
+  "playwright": "1.65.1",
+  "total": 2,
+  "passed": 2,
+  "failed": 0,
+  "skipped": 0,
+  "flaky": 0,
+  "durationMs": 4306.184,
+  "workers": 1,
+  "scope": "workflows",
+  "reports": {
+    "playwright": "reports/workflows/playwright",
+    "allure": "reports/workflows/allure"
+  },
+  "githubActions": "Not executed",
+  "runnerExitCode": 0
+}

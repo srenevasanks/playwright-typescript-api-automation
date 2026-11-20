@@ -1,0 +1,23 @@
+{
+  "run": "contract",
+  "started": "2026-11-20T17:02:01.920Z",
+  "completed": "2026-11-20T17:02:08.490Z",
+  "application": "TaskDesk / PocketBase 0.40.6",
+  "environment": "win32 local",
+  "node": "v24.11.1",
+  "playwright": "1.65.1",
+  "total": 3,
+  "passed": 3,
+  "failed": 0,
+  "skipped": 0,
+  "flaky": 0,
+  "durationMs": 4503.938,
+  "workers": 1,
+  "scope": "contract",
+  "reports": {
+    "playwright": "reports/contract/playwright",
+    "allure": "reports/contract/allure"
+  },
+  "githubActions": "Not executed",
+  "runnerExitCode": 0
+}

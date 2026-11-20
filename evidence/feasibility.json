@@ -1,0 +1,179 @@
+{
+  "at": "2026-11-20T16:44:40.960Z",
+  "node": "v24.11.1",
+  "checks": [
+    {
+      "name": "health",
+      "method": "GET",
+      "url": "/api/health",
+      "expected": 200,
+      "actual": 200,
+      "body": {
+        "message": "API is healthy.",
+        "code": 200,
+        "data": {}
+      }
+    },
+    {
+      "name": "register",
+      "method": "POST",
+      "url": "/api/collections/members/records",
+      "expected": 200,
+      "actual": 200,
+      "body": {
+        "collectionId": "pbc_2620428958",
+        "collectionName": "members",
+        "emailVisibility": false,
+        "id": "n0knnjqlfexlucl",
+        "role": "editor",
+        "verified": false
+      }
+    },
+    {
+      "name": "invalid authentication",
+      "method": "POST",
+      "url": "/api/collections/members/auth-with-password",
+      "expected": 400,
+      "actual": 400,
+      "body": {
+        "data": {},
+        "message": "Failed to authenticate.",
+        "status": 400
+      }
+    },
+    {
+      "name": "valid authentication",
+      "method": "POST",
+      "url": "/api/collections/members/auth-with-password",
+      "expected": 200,
+      "actual": 200,
+      "body": {
+        "record": {
+          "collectionId": "pbc_2620428958",
+          "collectionName": "members",
+          "email": "feasibility-0695afa9-b375-4629-8a68-a5228d9af2d0@example.test",
+          "emailVisibility": false,
+          "id": "n0knnjqlfexlucl",
+          "role": "editor",
+          "verified": false
+        },
+        "token": "[REDACTED]"
+      }
+    },
+    {
+      "name": "create project",
+      "method": "POST",
+      "url": "/api/collections/projects/records",
+      "expected": 200,
+      "actual": 200,
+      "body": {
+        "collectionId": "pbc_484305853",
+        "collectionName": "projects",
+        "id": "2saub94x9r68pz6",
+        "owner": "n0knnjqlfexlucl",
+        "status": "active",
+        "title": "Feasibility project"
+      }
+    },
+    {
+      "name": "retrieve project",
+      "method": "GET",
+      "url": "/api/collections/projects/records/2saub94x9r68pz6",
+      "expected": 200,
+      "actual": 200,
+      "body": {
+        "collectionId": "pbc_484305853",
+        "collectionName": "projects",
+        "id": "2saub94x9r68pz6",
+        "owner": "n0knnjqlfexlucl",
+        "status": "active",
+        "title": "Feasibility project"
+      }
+    },
+    {
+      "name": "unauthorized project access",
+      "method": "GET",
+      "url": "/api/collections/projects/records/2saub94x9r68pz6",
+      "expected": 404,
+      "actual": 404,
+      "body": {
+        "data": {},
+        "message": "The requested resource wasn't found.",
+        "status": 404
+      }
+    },
+    {
+      "name": "update project",
+      "method": "PATCH",
+      "url": "/api/collections/projects/records/2saub94x9r68pz6",
+      "expected": 200,
+      "actual": 200,
+      "body": {
+        "collectionId": "pbc_484305853",
+        "collectionName": "projects",
+        "id": "2saub94x9r68pz6",
+        "owner": "n0knnjqlfexlucl",
+        "status": "active",
+        "title": "Updated project"
+      }
+    },
+    {
+      "name": "create related task",
+      "method": "POST",
+      "url": "/api/collections/tasks/records",
+      "expected": 200,
+      "actual": 200,
+      "body": {
+        "collectionId": "pbc_2602490748",
+        "collectionName": "tasks",
+        "id": "e6noj8vhhxxxsx8",
+        "notes": "",
+        "priority": 3,
+        "project": "2saub94x9r68pz6",
+        "status": "todo",
+        "title": "Verify relationship"
+      }
+    },
+    {
+      "name": "complete task",
+      "method": "PATCH",
+      "url": "/api/collections/tasks/records/e6noj8vhhxxxsx8",
+      "expected": 200,
+      "actual": 200,
+      "body": {
+        "collectionId": "pbc_2602490748",
+        "collectionName": "tasks",
+        "id": "e6noj8vhhxxxsx8",
+        "notes": "",
+        "priority": 3,
+        "project": "2saub94x9r68pz6",
+        "status": "done",
+        "title": "Verify relationship"
+      }
+    },
+    {
+      "name": "delete task",
+      "method": "DELETE",
+      "url": "/api/collections/tasks/records/e6noj8vhhxxxsx8",
+      "expected": 204,
+      "actual": 204,
+      "body": null
+    },
+    {
+      "name": "delete project",
+      "method": "DELETE",
+      "url": "/api/collections/projects/records/2saub94x9r68pz6",
+      "expected": 204,
+      "actual": 204,
+      "body": null
+    },
+    {
+      "name": "cleanup member",
+      "method": "DELETE",
+      "url": "/api/collections/members/records/n0knnjqlfexlucl",
+      "expected": 204,
+      "actual": 204,
+      "body": null
+    }
+  ]
+}

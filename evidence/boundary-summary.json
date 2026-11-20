@@ -1,0 +1,23 @@
+{
+  "run": "boundary",
+  "started": "2026-11-20T17:01:48.339Z",
+  "completed": "2026-11-20T17:02:00.701Z",
+  "application": "TaskDesk / PocketBase 0.40.6",
+  "environment": "win32 local",
+  "node": "v24.11.1",
+  "playwright": "1.65.1",
+  "total": 18,
+  "passed": 18,
+  "failed": 0,
+  "skipped": 0,
+  "flaky": 0,
+  "durationMs": 10388.412,
+  "workers": 1,
+  "scope": "boundary",
+  "reports": {
+    "playwright": "reports/boundary/playwright",
+    "allure": "reports/boundary/allure"
+  },
+  "githubActions": "Not executed",
+  "runnerExitCode": 0
+}

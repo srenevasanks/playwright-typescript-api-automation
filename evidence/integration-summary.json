@@ -1,0 +1,23 @@
+{
+  "run": "integration",
+  "started": "2026-11-20T17:02:32.145Z",
+  "completed": "2026-11-20T17:02:38.705Z",
+  "application": "TaskDesk / PocketBase 0.40.6",
+  "environment": "win32 local",
+  "node": "v24.11.1",
+  "playwright": "1.65.1",
+  "total": 4,
+  "passed": 4,
+  "failed": 0,
+  "skipped": 0,
+  "flaky": 0,
+  "durationMs": 4711.684,
+  "workers": 1,
+  "scope": "integration",
+  "reports": {
+    "playwright": "reports/integration/playwright",
+    "allure": "reports/integration/allure"
+  },
+  "githubActions": "Not executed",
+  "runnerExitCode": 0
+}

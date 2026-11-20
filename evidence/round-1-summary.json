@@ -1,0 +1,23 @@
+{
+  "run": "regression",
+  "started": "2026-11-20T16:50:48.087Z",
+  "completed": "2026-11-20T16:51:22.131Z",
+  "application": "TaskDesk / PocketBase 0.40.6",
+  "environment": "win32 local",
+  "node": "v24.11.1",
+  "playwright": "1.65.1",
+  "total": 72,
+  "passed": 70,
+  "failed": 2,
+  "skipped": 0,
+  "flaky": 0,
+  "durationMs": 31887.663999999997,
+  "workers": 1,
+  "scope": "regression",
+  "reports": {
+    "playwright": "reports/regression/playwright",
+    "allure": "reports/regression/allure"
+  },
+  "githubActions": "Not executed",
+  "runnerExitCode": 1
+}

@@ -1,0 +1,23 @@
+{
+  "run": "functional",
+  "started": "2026-11-20T17:01:24.839Z",
+  "completed": "2026-11-20T17:01:34.329Z",
+  "application": "TaskDesk / PocketBase 0.40.6",
+  "environment": "win32 local",
+  "node": "v24.11.1",
+  "playwright": "1.65.1",
+  "total": 8,
+  "passed": 8,
+  "failed": 0,
+  "skipped": 0,
+  "flaky": 0,
+  "durationMs": 7788.024,
+  "workers": 1,
+  "scope": "functional",
+  "reports": {
+    "playwright": "reports/functional/playwright",
+    "allure": "reports/functional/allure"
+  },
+  "githubActions": "Not executed",
+  "runnerExitCode": 0
+}

@@ -1,0 +1,10 @@
+{
+  "at": "2026-11-20T17:07:10.963Z",
+  "resetReason": "Removed one disposable identity left by an intentionally interrupted diagnostic run, using the documented controlled reset",
+  "freshSmoke": "4/4 passed",
+  "counts": {
+    "members": 0,
+    "projects": 0,
+    "tasks": 0
+  }
+}

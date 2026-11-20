@@ -1,0 +1,8 @@
+node_modules/
+.cache/
+reports/
+test-results/
+.env
+*.log
+*.zip
+*.exe

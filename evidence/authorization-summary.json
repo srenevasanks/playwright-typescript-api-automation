@@ -1,0 +1,23 @@
+{
+  "run": "authorization",
+  "started": "2026-11-20T17:02:20.074Z",
+  "completed": "2026-11-20T17:02:30.890Z",
+  "application": "TaskDesk / PocketBase 0.40.6",
+  "environment": "win32 local",
+  "node": "v24.11.1",
+  "playwright": "1.65.1",
+  "total": 10,
+  "passed": 10,
+  "failed": 0,
+  "skipped": 0,
+  "flaky": 0,
+  "durationMs": 8951.312,
+  "workers": 1,
+  "scope": "authorization",
+  "reports": {
+    "playwright": "reports/authorization/playwright",
+    "allure": "reports/authorization/allure"
+  },
+  "githubActions": "Not executed",
+  "runnerExitCode": 0
+}

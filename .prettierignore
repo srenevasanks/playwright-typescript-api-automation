@@ -1,0 +1,7 @@
+node_modules
+.cache
+reports
+evidence
+test-results
+package-lock.json
+api-app/POCKETBASE-LICENSE.md

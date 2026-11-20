@@ -1,0 +1,23 @@
+{
+  "run": "sequential-1",
+  "started": "2026-11-20T17:03:26.122Z",
+  "completed": "2026-11-20T17:04:02.112Z",
+  "application": "TaskDesk / PocketBase 0.40.6",
+  "environment": "win32 local",
+  "node": "v24.11.1",
+  "playwright": "1.65.1",
+  "total": 72,
+  "passed": 72,
+  "failed": 0,
+  "skipped": 0,
+  "flaky": 0,
+  "durationMs": 33922.343,
+  "workers": 1,
+  "scope": "regression",
+  "reports": {
+    "playwright": "reports/sequential-1/playwright",
+    "allure": "reports/sequential-1/allure"
+  },
+  "githubActions": "Not executed",
+  "runnerExitCode": 0
+}

@@ -1,0 +1,169 @@
+{
+  "application": "TaskDesk / PocketBase 0.40.6",
+  "finalLocalRun": "parallel-2",
+  "generated": "2026-11-20T17:07:11.077Z",
+  "githubActions": "Pending publication; no success claimed",
+  "runs": [
+    {
+      "run": "smoke",
+      "started": "2026-11-20T17:07:04.861Z",
+      "completed": "2026-11-20T17:07:10.810Z",
+      "application": "TaskDesk / PocketBase 0.40.6",
+      "environment": "win32 local",
+      "node": "v24.11.1",
+      "playwright": "1.65.1",
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "durationMs": 4713.201999999999,
+      "workers": 1,
+      "scope": "smoke",
+      "reports": {
+        "playwright": "reports/smoke/playwright",
+        "allure": "reports/smoke/allure"
+      },
+      "githubActions": "Not executed",
+      "runnerExitCode": 0
+    },
+    {
+      "run": "regression",
+      "started": "2026-11-20T17:02:48.050Z",
+      "completed": "2026-11-20T17:03:25.458Z",
+      "application": "TaskDesk / PocketBase 0.40.6",
+      "environment": "win32 local",
+      "node": "v24.11.1",
+      "playwright": "1.65.1",
+      "total": 72,
+      "passed": 72,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "durationMs": 35035.272000000004,
+      "workers": 1,
+      "scope": "regression",
+      "reports": {
+        "playwright": "reports/regression/playwright",
+        "allure": "reports/regression/allure"
+      },
+      "githubActions": "Not executed",
+      "runnerExitCode": 0
+    },
+    {
+      "run": "sequential-1",
+      "started": "2026-11-20T17:03:26.122Z",
+      "completed": "2026-11-20T17:04:02.112Z",
+      "application": "TaskDesk / PocketBase 0.40.6",
+      "environment": "win32 local",
+      "node": "v24.11.1",
+      "playwright": "1.65.1",
+      "total": 72,
+      "passed": 72,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "durationMs": 33922.343,
+      "workers": 1,
+      "scope": "regression",
+      "reports": {
+        "playwright": "reports/sequential-1/playwright",
+        "allure": "reports/sequential-1/allure"
+      },
+      "githubActions": "Not executed",
+      "runnerExitCode": 0
+    },
+    {
+      "run": "sequential-2",
+      "started": "2026-11-20T17:04:03.289Z",
+      "completed": "2026-11-20T17:04:39.645Z",
+      "application": "TaskDesk / PocketBase 0.40.6",
+      "environment": "win32 local",
+      "node": "v24.11.1",
+      "playwright": "1.65.1",
+      "total": 72,
+      "passed": 72,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "durationMs": 33708.491,
+      "workers": 1,
+      "scope": "regression",
+      "reports": {
+        "playwright": "reports/sequential-2/playwright",
+        "allure": "reports/sequential-2/allure"
+      },
+      "githubActions": "Not executed",
+      "runnerExitCode": 0
+    },
+    {
+      "run": "sequential-3",
+      "started": "2026-11-20T17:04:41.006Z",
+      "completed": "2026-11-20T17:05:20.186Z",
+      "application": "TaskDesk / PocketBase 0.40.6",
+      "environment": "win32 local",
+      "node": "v24.11.1",
+      "playwright": "1.65.1",
+      "total": 72,
+      "passed": 72,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "durationMs": 37008.655,
+      "workers": 1,
+      "scope": "regression",
+      "reports": {
+        "playwright": "reports/sequential-3/playwright",
+        "allure": "reports/sequential-3/allure"
+      },
+      "githubActions": "Not executed",
+      "runnerExitCode": 0
+    },
+    {
+      "run": "parallel-1",
+      "started": "2026-11-20T17:05:21.247Z",
+      "completed": "2026-11-20T17:05:42.127Z",
+      "application": "TaskDesk / PocketBase 0.40.6",
+      "environment": "win32 local",
+      "node": "v24.11.1",
+      "playwright": "1.65.1",
+      "total": 72,
+      "passed": 72,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "durationMs": 18947.41,
+      "workers": 2,
+      "scope": "regression",
+      "reports": {
+        "playwright": "reports/parallel-1/playwright",
+        "allure": "reports/parallel-1/allure"
+      },
+      "githubActions": "Not executed",
+      "runnerExitCode": 0
+    },
+    {
+      "run": "parallel-2",
+      "started": "2026-11-20T17:05:43.161Z",
+      "completed": "2026-11-20T17:06:02.037Z",
+      "application": "TaskDesk / PocketBase 0.40.6",
+      "environment": "win32 local",
+      "node": "v24.11.1",
+      "playwright": "1.65.1",
+      "total": 72,
+      "passed": 72,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "durationMs": 17312.176,
+      "workers": 2,
+      "scope": "regression",
+      "reports": {
+        "playwright": "reports/parallel-2/playwright",
+        "allure": "reports/parallel-2/allure"
+      },
+      "githubActions": "Not executed",
+      "runnerExitCode": 0
+    }
+  ]
+}

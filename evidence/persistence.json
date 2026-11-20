@@ -1,0 +1,6 @@
+{
+  "at": "2026-11-20T17:03:19.339Z",
+  "status": "passed",
+  "method": "Create project, stop process, restart with same SQLite directory, retrieve identical title and owner",
+  "projectId": "ae9tlt19lnwrlxo"
+}
